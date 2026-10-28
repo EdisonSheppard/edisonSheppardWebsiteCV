@@ -1,0 +1,4 @@
+{
+  "repositories": [],
+  "notes": "Private project repositories are not configured here. Keep names/credentials in GitHub Actions variables/secrets; only reviewed content goes into site/."
+}
