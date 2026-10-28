@@ -16,5 +16,22 @@
     "cover_alt": "Current camera mounting design for the 3D scanner, shown in perspective CAD.",
     "page": "projects/3d-scanner.html",
     "repository_private": true
+  },
+  {
+    "slug": "cyberdeck",
+    "title": "Portable Cyberdeck PC",
+    "summary": "A desktop PC with an Intel Core i5-12400F, Radeon RX 5600 XT, 500 W power supply and integrated 24-inch monitor, built into a rugged case so it can be moved between locations.",
+    "category": "Hardware / Custom PC Build",
+    "status": "Built",
+    "tags": [
+      "Custom PC",
+      "Mechanical Design",
+      "Cyberdeck",
+      "Portable Workstation"
+    ],
+    "published": true,
+    "cover": "assets/cyberdeck/case-illustration.svg",
+    "cover_alt": "Illustrated placeholder of a portable desktop computer inside an open rugged case.",
+    "page": "projects/cyberdeck.html"
   }
 ]
