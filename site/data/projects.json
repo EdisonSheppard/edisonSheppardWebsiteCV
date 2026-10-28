@@ -30,8 +30,8 @@
       "Portable Workstation"
     ],
     "published": true,
-    "cover": "assets/cyberdeck/case-illustration.svg",
-    "cover_alt": "Illustrated placeholder of a portable desktop computer inside an open rugged case.",
+    "cover": "assets/cyberdeck/cover.webp",
+    "cover_alt": "Presentation-enhanced photograph of the portable cyberdeck computer and desk setup.",
     "page": "projects/cyberdeck.html"
   }
 ]
