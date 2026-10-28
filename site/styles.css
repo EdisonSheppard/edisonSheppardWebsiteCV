@@ -6,3 +6,7 @@
 /* Wildlife photo in the About Me hero, using the original image without overlays. */
 .hero-visual{background:#1a2418}
 .hero-visual img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center center}
+
+/* RC vehicle cards: preserve complete wheels, tracks, wiring and chassis. */
+.project-media--full-vehicle{background:#202226}
+.project-media--full-vehicle img{object-fit:contain;object-position:center center}

@@ -25,6 +25,10 @@
   function card(project) {
     const article = element("article", "project-card");
     const media = element("div", "project-media");
+    // Show the complete vehicles in the homepage cards instead of cropping off wheels/tracks.
+    if (project.slug === "rc-car" || project.slug === "rc-tank") {
+      media.classList.add("project-media--full-vehicle");
+    }
     const imagePath = localPath(project.cover);
     if (imagePath) {
       const img = document.createElement("img");
