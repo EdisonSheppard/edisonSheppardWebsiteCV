@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101114">
+  <meta name="description" content="A FlashForge printer refitted as a focus-based 3D scanner, with Klipper motion control, OpenCV and a Python desktop interface.">
+  <title>Camera-Based 3D Scanner · Edison Sheppard</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .project-header{padding:34px 0 0}.back-link{display:inline-flex;gap:12px;color:var(--muted);font-size:12px;border-bottom:1px solid #617665;padding-bottom:8px}.back-link:hover{color:var(--accent)}
+    .project-hero{padding:80px 0 64px;max-width:1100px}.project-hero h1{font-size:clamp(47px,6vw,84px);margin:25px 0 25px}.project-hero .subhead{font-size:clamp(16px,1.7vw,22px);line-height:1.6;color:#d8ddd6;max-width:850px}.project-status{font-size:11px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+    .media-feature{border:1px solid var(--line);background:#191b1e;padding:clamp(10px,2.3vw,28px);margin:0}.media-feature a{display:block;cursor:zoom-in}.media-feature img{display:block;max-width:1180px;width:100%;height:auto;margin:0 auto;background:#d0d0d0}.media-caption{margin:16px 0 0;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px;line-height:1.6;color:var(--muted)}.media-caption strong{color:var(--text)}
+    .project-intro{padding:96px 0 75px;display:grid;grid-template-columns:minmax(200px,1fr) 2fr;gap:40px;border-bottom:1px solid var(--line)}.project-intro h2{font-size:clamp(32px,3vw,48px);font-weight:500;letter-spacing:-.045em}.prose p{font-size:15px;line-height:1.9;color:#c3c7c2;max-width:780px}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:35px 0 110px}.feature{padding-top:22px;border-top:1px solid #5c6e5d}.feature .index{font-size:11px;color:var(--accent)}.feature h3{font-size:22px;font-weight:520;margin:20px 0 12px}.feature p{color:var(--muted);font-size:13px;line-height:1.8}
+    .source-note{border-left:2px solid var(--accent);padding:6px 0 6px 23px;margin-bottom:94px;max-width:850px}.source-note p{color:var(--muted);font-size:13px;line-height:1.9;margin-bottom:0}
+    @media(max-width:760px){.project-hero{padding:60px 0 36px}.project-intro{grid-template-columns:1fr;padding:70px 0 50px;gap:10px}.features{grid-template-columns:1fr;gap:32px;margin:40px 0 70px}.media-feature{margin:0 -10px}.media-caption{font-size:11px}}
+  </style>
+</head>
+<body>
+<div class="shell">
+  <header class="masthead"><a class="wordmark" href="../" aria-label="Edison Sheppard, home"><span class="wordmark-mark">ES<span class="mark-period">.</span></span><span class="wordmark-label">Edison Sheppard</span></a><a class="masthead-link" href="https://github.com/EdisonSheppard" target="_blank" rel="noopener noreferrer">GitHub ↗</a></header>
+  <main>
+    <div class="project-header"><a class="back-link" href="../#projects">← All projects</a></div>
+    <section class="project-hero" aria-labelledby="page-title">
+      <div class="eyebrow">ENGINEERING / SOFTWARE / PROTOTYPING</div>
+      <h1 id="page-title">Camera-Based<br><em>3D Scanner.</em></h1>
+      <p class="subhead">Repurposing a FlashForge printer into a camera-based height scanner, using precise motion control, autofocus measurements and custom Python software.</p>
+      <div class="project-status">Python · OpenCV · Klipper / Moonraker · In development</div>
+    </section>
+    <figure class="media-feature">
+      <a href="../assets/3d-scanner/scanner-ui-preview.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-resolution image of the Python scanner interface">
+        <img src="../assets/3d-scanner/scanner-ui-preview.png" width="1180" height="840" alt="Actual Tkinter scanner application: Scan tab with home-and-focus, object and XY-area controls, and an empty live telephoto preview panel." loading="eager">
+      </a>
+      <figcaption class="media-caption"><span><strong>Python desktop interface</strong> — captured automatically from the real Tkinter application.</span><span>Preview-only mode · no camera or printer connected · select image to enlarge</span></figcaption>
+    </figure>
+    <section class="project-intro" aria-labelledby="overview-heading">
+      <div><div class="eyebrow">01 / OVERVIEW</div><h2 id="overview-heading">An old printer,<br>a new purpose<span class="accent">.</span></h2></div>
+      <div class="prose">
+        <p>The project reuses the movement system of a FlashForge printer for controlled camera positioning. Rather than relying on a single photograph, it searches for a sharp focus peak at individual XY locations and uses the measured machine Z position to construct a height map.</p>
+        <p>Its desktop interface brings together camera setup, an empty-bed focus reference, guarded positioning, rectangular scan framing, progress monitoring and a 3D height-map viewer. The system is designed to leave uncertain measurements as gaps instead of inventing surface heights.</p>
+      </div>
+    </section>
+    <section aria-labelledby="details-heading">
+      <div class="section-heading" style="padding-top:85px"><div><div class="eyebrow">02 / TECHNICAL WORK</div><h2 id="details-heading">Under the hood<span class="accent">.</span></h2></div></div>
+      <div class="features">
+        <article class="feature"><span class="index">01 / MOTION</span><h3>Controlled positioning</h3><p>Klipper and Moonraker provide the motion interface, with live machine-limit and homing checks before guarded XY and Z movements.</p></article>
+        <article class="feature"><span class="index">02 / OPTICS</span><h3>Focus-based measurement</h3><p>A telephoto camera records focus scores during coarse and fine Z searches. A verified empty-bed focus serves as the reference height.</p></article>
+        <article class="feature"><span class="index">03 / OUTPUT</span><h3>Height-map generation</h3><p>Python combines focus measurements into an XY height map. Grid and stepped-outline scan modes are supported, with incomplete data left explicit.</p></article>
+      </div>
+    </section>
+    <div class="source-note"><div class="eyebrow">ABOUT THE INTERFACE PREVIEW</div><p>This image comes from the scanner's actual Python/Tkinter source using a temporary virtual desktop and its preview-only mode. It is not a screenshot of an active scan and does not demonstrate camera image quality or completed measurement results. The underlying project repository and raw configuration remain private.</p></div>
+  </main>
+  <footer class="footer"><div><span class="footer-name">Edison Sheppard</span><p>Engineering &amp; maker portfolio</p></div><a href="../#projects">Browse projects ↗</a><span class="footer-bottom">Made to evolve alongside the projects.</span></footer>
+</div>
+</body>
+</html>
