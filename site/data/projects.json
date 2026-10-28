@@ -37,9 +37,9 @@
   {
     "slug": "rc-car",
     "title": "Custom Two-Speed RC Car",
-    "summary": "A custom-built RC car with a two-speed drivetrain, articulated suspension, 3D-printed mechanisms and exposed electronics.",
+    "summary": "A 1:20 mining-haul RC vehicle with two-speed dog clutch, four-wheel drive and servo dumping, tested with payloads up to 1.55 kg.",
     "category": "Mechanical Engineering / Robotics",
-    "status": "Prototype",
+    "status": "Tested prototype",
     "tags": [
       "3D Printing",
       "Mechanical Design",
@@ -54,9 +54,9 @@
   {
     "slug": "rc-tank",
     "title": "Custom Tracked RC Tank",
-    "summary": "A custom-built tracked RC chassis with 3D-printed links, articulated road-wheel suspension, geared drives and exposed electronics.",
+    "summary": "A 620 g tracked rover with 3D-printed links, suspended rollers, ESP32 control and a measured average course time of 11.30 s.",
     "category": "Mechanical Engineering / Robotics",
-    "status": "Prototype",
+    "status": "Tested prototype",
     "tags": [
       "3D Printing",
       "Tracked Drive",
