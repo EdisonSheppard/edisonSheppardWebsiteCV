@@ -2,18 +2,18 @@
   {
     "slug": "3d-scanner",
     "title": "Camera-Based 3D Scanner",
-    "summary": "Repurposing a FlashForge printer into a focus-based 3D scanner with Python, computer vision and guarded motion control.",
-    "category": "Engineering / Software",
+    "summary": "Reworking a FlashForge Creator Pro for focus-variation scanning, with evolving camera-mount CAD, OpenCV and guarded motion control.",
+    "category": "Mechanical Engineering / Software",
     "status": "In development",
     "tags": [
+      "CAD",
       "Python",
       "OpenCV",
-      "Klipper",
-      "3D Scanning"
+      "Klipper"
     ],
     "published": true,
-    "cover": "assets/3d-scanner/scanner-ui-preview.png",
-    "cover_alt": "Tkinter control interface for the 3D scanner in preview-only mode.",
+    "cover": "assets/3d-scanner/mount-current-perspective.png",
+    "cover_alt": "Current camera mounting design for the 3D scanner, shown in perspective CAD.",
     "page": "projects/3d-scanner.html",
     "repository_private": true
   }
