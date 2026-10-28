@@ -33,5 +33,39 @@
     "cover": "assets/cyberdeck/cover.webp",
     "cover_alt": "Presentation-enhanced photograph of the portable cyberdeck computer and desk setup.",
     "page": "projects/cyberdeck.html"
+  },
+  {
+    "slug": "rc-car",
+    "title": "Custom Two-Speed RC Car",
+    "summary": "A custom-built RC car with a two-speed drivetrain, articulated suspension, 3D-printed mechanisms and exposed electronics.",
+    "category": "Mechanical Engineering / Robotics",
+    "status": "Prototype",
+    "tags": [
+      "3D Printing",
+      "Mechanical Design",
+      "RC Vehicles",
+      "Gearing"
+    ],
+    "published": true,
+    "cover": "assets/rc-car/cover.webp",
+    "cover_alt": "Side view of the custom RC car with blue wheels, white printed suspension arms, exposed gears and electronics.",
+    "page": "projects/rc-car.html"
+  },
+  {
+    "slug": "rc-tank",
+    "title": "Custom Tracked RC Tank",
+    "summary": "A custom-built tracked RC chassis with 3D-printed links, articulated road-wheel suspension, geared drives and exposed electronics.",
+    "category": "Mechanical Engineering / Robotics",
+    "status": "Prototype",
+    "tags": [
+      "3D Printing",
+      "Tracked Drive",
+      "Suspension",
+      "Electronics"
+    ],
+    "published": true,
+    "cover": "assets/rc-tank/cover.webp",
+    "cover_alt": "Angled view of the custom tracked RC tank chassis, showing red printed treads, drive units and exposed electronics.",
+    "page": "projects/rc-tank.html"
   }
 ]
