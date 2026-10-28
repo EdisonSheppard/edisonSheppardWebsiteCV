@@ -34,8 +34,8 @@ def validate():
         if slug in seen:
             raise ValueError(f"Duplicate project slug: {slug}")
         seen.add(slug)
-        if not isinstance(project["published"], bool):
-            raise ValueError(f"Project {idx}: published must be boolean.")
+        if project["published"] is not True:
+            raise ValueError(f"Project {idx}: unpublished draft records must never be included in public JSON.")
         for key in ("title", "summary"):
             if not isinstance(project[key], str) or not project[key].strip():
                 raise ValueError(f"Project {idx}: {key} cannot be blank.")
